@@ -19,6 +19,7 @@ az aks create \
   --kubernetes-version $AKS_K8S \
   --node-count 1 \
   --node-vm-size $VM_SIZE \
+  --enable-cluster-autoscaler \
   --min-count 1 \
   --max-count 2  \
   --enable-defender \
@@ -29,6 +30,7 @@ az aks create \
   --location $LOCATION_2 \
   --generate-ssh-keys \
   --kubernetes-version $AKS_K8S2 \
+  --enable-cluster-autoscaler \
   --node-count 1 \
   --node-vm-size $VM_SIZE \
   --min-count 1 \
