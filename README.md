@@ -7,6 +7,8 @@ To start this process run the following
 
 <code> git clone https://github.com/sn0rlaxlife/aks-fleet-shell.git </code>
 Second feel free to update the setenv.sh file to any desired values
+<code>bash ./setenv.sh</code>
+
 <code>./aks-deployment.sh</code>
 
 
