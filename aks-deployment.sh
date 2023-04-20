@@ -37,9 +37,9 @@ az aks create \
   --max-count 2  \
   --enable-defender \
 
-az aks get-credential -g $RG_GROUP -n $(az aks list -o table | grep $AKS_CLUSTER | awk '{print $1}')
+az aks get-credentials -g $RG_GROUP -n $(az aks list -o table | grep $AKS_CLUSTER | awk '{print $1}')
 
-az aks get-credential -g $AKS_CLUSTER2 -n $(az aks list -o table | grep $AKS_CLUSTER2 | awk '{print $1}')
+az aks get-credentials -g $AKS_CLUSTER2 -n $(az aks list -o table | grep $AKS_CLUSTER2 | awk '{print $1}')
 
 echo "-----Creation of AKS Kubernetes Fleet Manager-----" | awk '{print $1}'
 ./create-fleet.sh
